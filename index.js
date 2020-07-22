@@ -8,6 +8,6 @@ class Formatter {
   }
   static titleize(newString){
     const exceptions = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
-    return newString.split(" ").map(w=>exceptions.find(exception=>w===exception)?  w : this.capitalize(w)).join(" ");
+    return newString.split(" ").map((w,i)=>(exceptions.find(exception=>w===exception)||!!i)?  w : this.capitalize(w)).join(" ");
   }
 }
