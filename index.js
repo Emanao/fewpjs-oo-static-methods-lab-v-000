@@ -5,5 +5,5 @@ class Formatter {
   }
   static sanitize(newString){
     return newString.replace(/^[A-Za-z0-9-']/);
-  })
+  }
 }
