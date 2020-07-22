@@ -10,6 +10,6 @@ class Formatter {
     const exceptions = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
     return newString.split(" ").map(w=>{
       if(!exceptions.find(exception=>w===exception)) return this.capitalize(w)
-    });
+    }).join(" ");
   }
 }
