@@ -9,7 +9,7 @@ class Formatter {
   static titleize(newString){
     const exceptions = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
     return newString.split(" ").map(w=>{
-      if(!exceptions.find(exception=>w===exception)) return this.capitalize(w)
+      return exceptions.find(exception=>w===exception)?  w : this.capitalize(w)
     }).join(" ");
   }
 }
