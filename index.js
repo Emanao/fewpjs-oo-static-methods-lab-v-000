@@ -4,6 +4,6 @@ class Formatter {
     return newString.replace(/^[a-z]/,newString.charAt(0).toUpperCase());
   }
   static sanitize(newString){
-    return newString.replace(/[^A-Za-z0-9-'\s]+/,'');
+    return newString.replace(/[^A-Za-z0-9-'\s]+/g,'');
   }
 }
